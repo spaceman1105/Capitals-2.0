@@ -1,0 +1,64 @@
+:root {
+  --color1: #ace189;
+  --color2: #1b2711;
+}
+
+body {
+  background: url("../img/world.png") no-repeat center fixed;
+  background-size: contain;
+}
+
+* {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
+
+.perspective {
+  perspective: 1000px;
+  max-width: 750px;
+}
+
+.flashcard {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  backface-visibility: hidden;
+  transition: 2s;
+  transform-style: preserve-3d;
+  margin: 0 auto;
+}
+
+.quiz p {
+  text-align: center;
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border: 3px solid var(--color2);
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.front {
+  color: var(--color2);
+  background-color: var(--color1);
+  z-index: 2;
+}
+
+.back {
+  color: var(--color1);
+  background-color: var(--color2);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.flashcard:hover {
+  transform: rotateY(180deg);
+}
