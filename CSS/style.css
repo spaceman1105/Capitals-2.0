@@ -5,6 +5,9 @@
 
 body {
   background: url("../img/world.png") no-repeat center fixed;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   background-size: contain;
 }
 
@@ -15,6 +18,9 @@ body {
 
 .perspective {
   perspective: 1000px;
+  -ms-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
   max-width: 750px;
 }
 
@@ -24,7 +30,11 @@ body {
   position: relative;
   backface-visibility: hidden;
   transition: 2s;
+  -o-transition: 2s;
+  -moz-transition: 2s;
+  -webkit-transition: 2s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   margin: 0 auto;
 }
 
@@ -55,10 +65,18 @@ body {
 .back {
   color: var(--color1);
   background-color: var(--color2);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   z-index: 1;
 }
 
 .flashcard:hover {
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
