@@ -16,26 +16,29 @@ body {
   font-weight: 700;
 }
 
-.perspective {
-  perspective: 1000px;
-  -ms-perspective: 1000px;
-  -moz-perspective: 1000px;
-  -webkit-perspective: 1000px;
+.mw-750 {
   max-width: 750px;
 }
 
 .flashcard {
   width: 200px;
   height: 200px;
+  margin: 0 auto;
   position: relative;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
+
   transition: 2s;
   -o-transition: 2s;
   -moz-transition: 2s;
   -webkit-transition: 2s;
+
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
-  margin: 0 auto;
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
+  backface-visibility: hidden;
 }
 
 .quiz p {
